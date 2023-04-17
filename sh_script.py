@@ -1,8 +1,15 @@
+import argparse
 import logging
 import time
 import requests
 import json
 from notion_client import Client
+
+parser = argparse.ArgumentParser()
+parser.add_argument('cookie', help='cookie value for authentication')
+parser.add_argument('notion_token', help='Notion API token')
+parser.add_argument('database_id', help='Notion database ID')
+args = parser.parse_args()
 
 # 配置日志
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
@@ -51,11 +58,6 @@ for book in data['result']['book_info']:
                     },
                     'Page': {
                         'number': page['page_no']
-                    },
-                    'Date': {
-                        'date': {
-                            'start': time.strftime('%Y-%m-%d', time.localtime())
-                        }
                     }
                 }
             )
