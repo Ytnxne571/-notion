@@ -1,0 +1,36 @@
+import requests
+import json
+
+# 微信读书API的URL
+WECHAT_READING_API_URL = "https://i.weread.qq.com/cloud/pendata"
+
+def get_all_notes(cookie):
+    """获取用户在微信读书中写的笔记和选择的段落笔记"""
+    headers = {
+        "Cookie": cookie
+    }
+    # 构造请求参数
+    params = {
+        "cmd": "get",
+        "type": "all",
+        "pagenum": 1,
+        "pagesize": 1000
+    }
+    # 发送POST请求
+    r = requests.post(WECHAT_READING_API_URL, headers=headers, data=params)
+    if r.ok:
+        # 解析JSON数据
+        data = json.loads(r.content)
+        notes = data.get("data", {}).get("list", [])
+        return notes
+    else:
+        return []
+
+if __name__ == "__main__":
+    # 微信读书的Cookie，需要替换为自己的Cookie
+    cookie = "替换为自己的Cookie"
+    # 获取用户在微信读书中写的笔记和选择的段落笔记
+    all_notes = get_all_notes(cookie)
+    # 将笔记列表保存到文件中
+    with open("all_notes.json", "w", encoding="utf-8") as f:
+        f.write(json.dumps(all_notes, ensure_ascii=False))
