@@ -1,1 +1,2 @@
 pip install notion-client pprint
+pip3 install notion-client
