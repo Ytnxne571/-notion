@@ -1,0 +1,26 @@
+name: Sync Reading Progress to Notion (Manual)
+
+on:
+  workflow_dispatch: # 手动触发
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x' # 指定 Python 版本
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install notion-client requests
+      - name: Sync Reading Progress
+        env:
+          COOKIE: ${{ secrets.COOKIE }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          DATABASE_ID: ${{ secrets.DATABASE_ID }}
+        run: |
+          python hx_script.py $COOKIE $NOTION_TOKEN $DATABASE_ID
