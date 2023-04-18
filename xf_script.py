@@ -1,3 +1,4 @@
+import argparse
 notion_properties = {
     "Idea": {
         "title": [
