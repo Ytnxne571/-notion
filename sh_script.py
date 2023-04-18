@@ -6,9 +6,9 @@ import json
 from notion_client import Client
 
 parser = argparse.ArgumentParser()
-parser.add_argument('cookie', help='COOKIE')
-parser.add_argument('notion_token', help='NOTION_TOKEN')
-parser.add_argument('database_id', help='DATABASE_ID')
+parser.add_argument('COOKIE', help='COOKIE')
+parser.add_argument('NOTION_TOKEN', help='NOTION_TOKEN')
+parser.add_argument('DATABASE_ID', help='DATABASE_ID')
 args = parser.parse_args()
 
 # 配置日志
