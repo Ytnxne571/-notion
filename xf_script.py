@@ -75,9 +75,9 @@ def get_idea_list(filename):
 if __name__ == "__main__":
     # 解析命令行参数
     parser = argparse.ArgumentParser()
-    parser.add_argument("notion_token", help="Notion API token")
-    parser.add_argument("database_id", help="Notion database ID")
-    parser.add_argument("filename", help="File name of the idea list")
+    parser.add_argument("NOTION_TOKEN", help="Notion API token")
+    parser.add_argument("DATABASE_ID", help="Notion database ID")
+    parser.add_argument("COOKIE", help="File name of the idea list")
     options = parser.parse_args()
     notion_token = options.notion_token
     database_id = options.database_id
