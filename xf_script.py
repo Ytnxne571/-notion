@@ -10,7 +10,7 @@ COOKIE = "wr_fp=3140426081; wr_gid=234723305; wr_vid=436256338; wr_pf=2; wr_rt=w
 NOTION_API_KEY = "secret_VMxqT0pKsZMmziMrDD9FOR87uFz1dsMSngOOlGZ4UAT"
 
 # Notion 数据库 ID
-NOTION_DATABASE_ID = "7a5161c68a784b2a9f3bf5ae54998d6b"
+NOTION_DATABASE_ID = "8b4563e2380b42f49a49babc4de36f0f"
 
 # 获取微信读书书籍详情
 def get_book_details(book_uri):
