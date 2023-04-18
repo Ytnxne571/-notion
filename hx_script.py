@@ -4,7 +4,7 @@ from notion_client import Client
 from notion.block import TextBlock
 
 # Notion API key
-NOTION_API_KEY = ""
+NOTION_API_KEY = "secret_VMxqT0pKsZMmziMrDD9FOR87uFz1dsMSngOOlGZ4UAT"
 
 # Notion 数据库名称
 NOTION_DATABASE_NAME = "My Book Database"
