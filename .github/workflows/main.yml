@@ -23,6 +23,5 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           DATABASE_ID: ${{ secrets.DATABASE_ID }}
         run: |
-          python sh_script.py $COOKIE $NOTION_TOKEN $DATABASE_ID
           python xf_script.py $COOKIE $NOTION_TOKEN $DATABASE_ID
           python hx_script.py $COOKIE $NOTION_TOKEN $DATABASE_ID
