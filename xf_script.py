@@ -4,13 +4,13 @@ from datetime import datetime
 from notion_client import Client
 
 # 微信读书 cookie
-COOKIE = ""
+COOKIE = "wr_fp=3140426081; wr_gid=234723305; wr_vid=436256338; wr_pf=2; wr_rt=web%40eCqhqxVmZmZN2cOmWcr_AL; wr_localvid=92c3206081a00be5292cdb1; wr_name=%D0%90%D0%BD%D1%82%D0%BE%D0%BD; wr_avatar=https%3A%2F%2Fthirdwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83eq7YJ6yJNJt1qSE4JZyJdHNZRDzbGUXdicmqEYibOktLWyunf1EUUv9skD7CwhSeo2TgdMIEJYkw0pA%2F132; wr_gender=0"
 
 # Notion API key
-NOTION_API_KEY = ""
+NOTION_API_KEY = "secret_VMxqT0pKsZMmziMrDD9FOR87uFz1dsMSngOOlGZ4UAT"
 
 # Notion 数据库 ID
-NOTION_DATABASE_ID = ""
+NOTION_DATABASE_ID = "b9151332757b46089a26054bd39acc78"
 
 # 获取微信读书书籍详情
 def get_book_details(book_uri):
