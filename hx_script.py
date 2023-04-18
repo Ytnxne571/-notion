@@ -86,10 +86,10 @@ def get_notebooklist():
 if __name__ == "__main__":
     # 定义可供修改的变量
     # Microsof Notion API  token
-    notion_token = "<NOTION_API_TOKEN>"
+    notion_token = "<NOTION_TOKEN>"
 
     # 微信读书 cookie，注意 cookie 中的双引号需要使用转义符号
-    weread_cookie = "<WECHAT_COOKIE>"
+    weread_cookie = "<COOKIE>"
 
     # Notion 数据库 id
     database_id = "<DATABASE_ID>"
